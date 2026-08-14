@@ -1,0 +1,39 @@
+# alpha-sweep FAB core: homogeneous rate-0.25 alpha=0.05
+num-clients = 50
+num-server-rounds = 500
+local-epochs = 5
+clients-per-round = 5
+rnd-seed = 42
+
+learning-rate = 0.05
+momentum = 0.9
+weight-decay = 0.0005
+global-lr = 1.0
+
+global-model-rate = 0.25
+model-rates = "0.25"
+rate-distribution = "1.0"
+core-model-rate = 0.25
+model-split-mode = "fix"
+overlap = 0.0
+norm-type = "sbn"
+bn-recalibrate-eval = true
+core-force-scaler-eval = true
+enable-shell-repair = false
+
+wandb-enabled = false
+save-path = "results/alpha_sweep/homo_small_a05_s42.csv"
+
+[algorithm]
+name = "homo_small"
+
+[dataset]
+name = "cifar100"
+partitioning = "dirichlet"
+alpha = 0.05
+batch-size = 32
+seed = 42
+
+[model]
+name = "HeteroPreResNet18"
+num-classes = 100

@@ -1,0 +1,39 @@
+# CIFAR-100 canonical FedRolex baseline for AAAI missing-baseline table
+num-clients = 50
+num-server-rounds = 300
+local-epochs = 5
+clients-per-round = 5
+rnd-seed = 44
+
+learning-rate = 0.05
+momentum = 0.9
+weight-decay = 0.0005
+global-lr = 1.0
+
+global-model-rate = 1.0
+model-rates = "1.0,0.25"
+rate-distribution = "0.10,0.90"
+core-model-rate = 0.25
+model-split-mode = "fix"
+overlap = -1.0
+norm-type = "sbn"
+bn-recalibrate-eval = true
+core-force-scaler-eval = true
+enable-shell-repair = false
+
+wandb-enabled = false
+save-path = "results/aaai_missing_baseline/fl/c10_fedrolex_canonical_p010_s44.csv"
+
+[algorithm]
+name = "fedrolex"
+
+[dataset]
+name = "cifar10"
+partitioning = "dirichlet"
+alpha = 0.1
+batch-size = 32
+seed = 44
+
+[model]
+name = "HeteroPreResNet18"
+num-classes = 10
