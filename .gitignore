@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+data/
+results/
+logs/
+wandb/
+figs/
+*.pt
+*.log
+*.csv
+.venv/

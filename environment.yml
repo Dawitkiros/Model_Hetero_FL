@@ -1,0 +1,37 @@
+name: sapef
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - libgcc-ng>=13
+  - libstdcxx-ng>=13
+  - numpy
+  - scipy
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - h5py
+  - tqdm
+  - prettytable
+  - requests
+  - pyyaml
+  - psutil
+  - ipykernel
+  - jupyter_client
+  - jupyter_core
+  - pandoc
+  - latexmk
+  - pytorch=2.5.*
+  - torchvision=0.20.*
+  - torchaudio=2.5.*
+  - pytorch-cuda=12.1
+  - pip:
+      - flwr[simulation]>=1.22.0
+      - flwr-datasets
+      - datasets
+      - easydict
+      - wandb
+      - ptflops
