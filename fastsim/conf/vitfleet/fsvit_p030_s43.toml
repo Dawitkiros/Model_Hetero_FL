@@ -1,0 +1,40 @@
+# CIFAR-100 heterogeneous heterofl (full=1.0, small=0.125) — ViT, AdamW client optimizer
+num-clients = 50
+num-server-rounds = 600
+local-epochs = 5
+clients-per-round = 5
+rnd-seed = 43
+
+learning-rate = 0.0005
+momentum = 0.9
+weight-decay = 0.05
+global-lr = 1.0
+client-optimizer = "adamw"
+
+global-model-rate = 1.0
+model-rates = "1.0,0.125"
+rate-distribution = "0.30,0.70"
+core-model-rate = 0.125
+model-split-mode = "fix"
+overlap = 0.0
+norm-type = "sbn"
+bn-recalibrate-eval = false
+core-force-scaler-eval = true
+enable-shell-repair = false
+
+wandb-enabled = false
+save-path = "results/vitfleet/fsvit_p030_s43.csv"
+
+[algorithm]
+name = "heterofl"
+
+[dataset]
+name = "cifar100"
+partitioning = "dirichlet"
+alpha = 0.1
+batch-size = 32
+seed = 43
+
+[model]
+name = "HeteroViT"
+num-classes = 100

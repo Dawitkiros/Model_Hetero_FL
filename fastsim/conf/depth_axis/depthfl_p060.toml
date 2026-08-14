@@ -1,0 +1,39 @@
+num-clients = 50
+num-server-rounds = 500
+local-epochs = 5
+clients-per-round = 5
+rnd-seed = 42
+
+learning-rate = 0.1
+momentum = 0.9
+weight-decay = 0.001
+global-lr = 1.0
+
+depth-levels = "4,1"
+depth-distribution = "0.60,0.40"
+global-depth = 4
+core-depth = 1
+norm-type = "bn"
+
+depthfl-kd = true
+depthfl-extended = true
+kd-rampup-rounds = 300
+
+wandb-enabled = false
+save-path = "results/cifar100_depthfl_p060_s42.csv"
+
+compile-mode = "reduce-overhead"
+
+[algorithm]
+name = "depthfl"
+
+[dataset]
+name = "cifar100"
+partitioning = "dirichlet"
+alpha = 0.1
+batch-size = 32
+seed = 42
+
+[model]
+name = "MultiResNet18"
+num-classes = 100

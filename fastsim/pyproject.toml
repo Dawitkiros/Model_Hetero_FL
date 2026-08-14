@@ -1,0 +1,212 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "flore"
+version = "1.0.0"
+description = "FLoRE: A Flexible Framework for Model-Heterogeneous Federated Learning"
+license = "Apache-2.0"
+dependencies = [
+    "flwr[simulation]>=1.22.0",
+    "torch>=2.0.0",
+    "torchvision>=0.15.0",
+    "numpy>=1.24.0",
+    "scikit-learn>=1.3.0",
+    "matplotlib>=3.7.0",
+    "pandas>=2.0.0",
+]
+
+[tool.flwr.app]
+publisher = "FLoRE"
+
+[tool.flwr.app.components]
+serverapp = "flore.server_app:app"
+clientapp = "flore.client_app:app"
+
+# ===== Default Configuration (FLAT KEYS) =====
+[tool.flwr.app.config]
+num-clients = 100
+
+# Training
+num-server-rounds = 10
+local-epochs = 1
+local-steps = 10
+clients-per-round = 10
+
+# Optimization
+learning-rate-max = 0.01
+learning-rate-min = 0.003
+lr-warmup-rounds = 10
+momentum = 0.9
+weight-decay = 0.0005
+
+fraction-fit = 1.0
+fraction-evaluate = 0.0
+min-evaluate-clients = 0
+min-available-clients = 100
+stragglers-fraction = 0.0
+learning-rate = 0.0002       # local lr (default for hetero FL)
+global-lr = 1.0             # global lr (default)
+client-optimizer = "sgd"    # "sgd" | "adamw" (adamw for ViT/transformer clients)
+adam-b2 = 0.99              # fst_fedadam: FedAdam beta2
+rnd_seed = 42                   # random seed for reproducibility
+
+# Model Heterogeneity (for HeteroFL, FedRolex, etc.)
+global-model-rate = 1.0      # Global model width multiplier (0.25, 0.5, 0.75, 1.0)
+model-split-mode = "fix"     # How to distribute model rates: "fix", "uniform", "dirichlet"
+overlap = 0.0                # Rolling window overlap for FedRolex (0.0 to 1.0)
+model-rates = "1.0,0.25"     # Width candidates for heterogeneous clients
+rate-distribution = "0.5,0.5" # Fraction per width (aligned with model-rates)
+core-model-rate = 0.25       # Width used for toxicity-core metrics
+core-protect = 0             # Width-decoupled HeteroFL: 1 => full clients train shell only (core protected)
+norm-type = "sbn"            # "sbn" | "gn"
+bn-recalibrate-eval = true   # Only applies when norm-type == "sbn"
+core-force-scaler-eval = true # Force ScalerV2 during core eval for train/eval parity
+diag-core-only-full-eval = true # Only evaluate the full model on the core clients during full eval rounds
+weighting = "avg"            # "avg" | "width" | "updates" | "updates_width"
+reshuffle-rounds = 512       # FedRolex remapping period for channel permutations
+rnd-seed = 42                   # random seed for reproducibility
+
+# for FLoRE
+lift-scale = 1.0
+enable-shell-repair = true
+shell-repair-threshold = 3
+shell-repair-beta = 0.5
+shell-repair-noise-std = 0.0
+
+# Compression (flat keys - legacy, can remove if not needed)
+comp-type = "topk"
+sparsify-by = 0.01
+alpha-r = 0.85
+alpha-sc = 0.1         # for scallion
+beta-sc = 0.2          # for scafcom
+
+# Logging
+wandb-enabled = false
+wandb-project = "model-hetero-fl"
+wandb-name = "Experiment"
+save-path = "results/experiment.csv"
+track-metrics = false
+
+# Theory
+L-est = 1.0
+
+# stackoverflow settings
+model-type = "gpt2"  # "gpt2" or "lstm"
+
+
+
+[tool.flwr.app.config.algorithm]
+name = "flore"  # flore, heterofl, fedrolex, random, homo_small, homo_large, heterofl_lm
+
+
+
+[tool.flwr.app.config.dataset]
+name = "mnist"
+seed=42
+batch-size = 10
+val-ratio = 0.1
+mu = 1.0
+
+# mnist settings
+path = ""
+power-law = false
+num-unique-labels-per-partition = 2
+num-unique-labels = 10
+preassigned-num-samples-per-label = 5
+sigma = 2.0
+
+# cifar settings
+partitioning = "dirichlet"
+alpha = 0.5
+
+# stackoverflow settings
+vocab-size = 10000
+max-seq-len = 256
+samples-per-client = 500
+data-source = "huggingface"  # "huggingface", "leaf", or "synthetic"
+hf-dataset-name = "HuggingFaceH4/stack-exchange-preferences"
+hf-dataset-split = "train"
+hf-max-samples = 50000
+allow-synthetic-fallback = true
+
+[tool.flwr.app.config.fit]
+drop-client = false # with FedProx, clients shouldn't be dropped even if they are stragglers
+
+[tool.flwr.app.config.model]
+name = "LogisticRegression"
+num-classes = 10
+
+# gpt2 settings
+vocab-size = 10000
+max-seq-len = 256
+embed-dim = 128
+num-heads = 4
+num-layers = 2
+ffn-multiplier = 4
+dropout = 0.1
+tie-weights = true
+use-scaler = true
+
+# lstm settings
+hidden-dim = 512
+
+# ===== Federations =====
+
+#######################################################################
+# CONFIGURATION MIGRATION NOTICE:
+#
+# What was previously called "federation config" for SuperLink
+# connections in pyproject.toml has been renamed and moved.
+#
+# These settings are now **SuperLink connection configuration**
+# and are defined in the Flower configuration file.
+#
+# The entries below are commented out intentionally and are kept
+# only as a migration reference.
+#
+# Docs: https://flower.ai/docs/framework/ref-flower-configuration.html
+#######################################################################
+
+
+#######################################################################
+# CONFIGURATION MIGRATION NOTICE:
+#
+# What was previously called "federation config" for SuperLink
+# connections in pyproject.toml has been renamed and moved.
+#
+# These settings are now **SuperLink connection configuration**
+# and are defined in the Flower configuration file.
+#
+# The entries below are commented out intentionally and are kept
+# only as a migration reference.
+#
+# Docs: https://flower.ai/docs/framework/ref-flower-configuration.html
+#######################################################################
+
+
+#######################################################################
+# CONFIGURATION MIGRATION NOTICE:
+#
+# What was previously called "federation config" for SuperLink
+# connections in pyproject.toml has been renamed and moved.
+#
+# These settings are now **SuperLink connection configuration**
+# and are defined in the Flower configuration file.
+#
+# The entries below are commented out intentionally and are kept
+# only as a migration reference.
+#
+# Docs: https://flower.ai/docs/framework/ref-flower-configuration.html
+#######################################################################
+
+# [tool.flwr.federations]
+# default = "gpu-sim-50"
+
+# # CIFAR-100 capacity-headroom probe: 50 supernodes (matches num-clients=50).
+# [tool.flwr.federations.gpu-sim-50]
+# options.num-supernodes = 50
+# options.backend.name = "ray"
+# options.backend.client-resources.num-cpus = 2
+# options.backend.client-resources.num-gpus = 0.2
