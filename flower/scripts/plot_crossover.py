@@ -40,7 +40,7 @@ def main() -> None:
                 markersize=3.2, capsize=1.8, elinewidth=0.8, linestyle="--",
                 label="CIFAR-10", zorder=3)
     ax.set_xlabel(r"full-client fraction $p_{\mathrm{full}}$")
-    ax.set_ylabel("core $-$ full (points)")
+    ax.set_ylabel(r"$\Delta_{\mathrm{dep}} = \mathrm{acc}_{\mathrm{core}} - \mathrm{acc}_{\mathrm{full}}$ (points)")
     ax.set_xticks(P100)
     ax.grid(axis="y", color="#e3e3e3", linewidth=0.5, zorder=0)
     ax.spines["top"].set_visible(False)
