@@ -54,6 +54,21 @@ The K=500 and IID arms use the same runner with a different config directory:
 GPUS=0,1 CONF=conf/acfleet OUT=results/acfleet LOG=logs/acfleet bash fastsim/scripts/run_kscale.sh
 ```
 
+The K=500 fixed-count cell (1% share) and the IID ladder cells (K=100 and K=500 at five writers) have dedicated runners:
+
+```bash
+GPUS=0,1 bash fastsim/scripts/run_k500_p001.sh
+GPUS=0,1 bash fastsim/scripts/run_iid_ladder.sh
+```
+
+### Matched-optimization intervention
+
+Each eligible client's unique pool is restricted (`shell-unique-frac`) and/or its per-epoch draws rescaled (`shell-draw-frac`) while SGD steps, minibatch layout, and aggregation weights stay at baseline values; the suite includes the u=f=1 with-replacement sampler control and the K=200 draws-x4 mirror:
+
+```bash
+GPUS=0,1 bash fastsim/scripts/run_expmatch.sh
+```
+
 ### Table 3: constrained shell-training oracle
 
 Train the frozen rate-0.25 core once, then run the oracle arms on a trained full checkpoint:
