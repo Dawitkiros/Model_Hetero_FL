@@ -51,6 +51,8 @@ class SimConfig:
     batch_size: int
     data_seed: int
     data_fraction: float
+    shell_unique_frac: float
+    shell_draw_frac: float
     hflip: bool
     rate_assignment: str
     model_name: str
@@ -103,6 +105,8 @@ class SimConfig:
             batch_size=int(ds.get("batch-size", 32)),
             data_seed=int(ds.get("seed", 42)),
             data_fraction=float(ds.get("data-fraction", 1.0)),
+            shell_unique_frac=float(cfg.get("shell-unique-frac", 1.0)),
+            shell_draw_frac=float(cfg.get("shell-draw-frac", 1.0)),
             hflip=bool(cfg.get("hflip", True)),
             rate_assignment=str(cfg.get("rate-assignment", "sorted")).lower(),
             model_name=str(model.get("name", "HeteroPreResNet18")),

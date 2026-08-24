@@ -69,6 +69,17 @@ class FastSim:
             for slot, pid in enumerate(perm):
                 shuffled[pid] = self.rates[slot]
             self.rates = shuffled
+        self.draw_n = [None] * cfg.num_clients
+        u = getattr(cfg, "shell_unique_frac", 1.0)
+        f = getattr(cfg, "shell_draw_frac", 1.0)
+        if u < 1.0 or f != 1.0:
+            top = max(cfg.model_rates)
+            for pid in range(cfg.num_clients):
+                if self.rates[pid] == top:
+                    n = len(self.client_train[pid])
+                    if u < 1.0:
+                        self.client_train[pid] = self.client_train[pid][: max(1, round(n * u))]
+                    self.draw_n[pid] = max(1, round(n * f))
         with torch.random.fork_rng(devices=[]):
             torch.manual_seed(cfg.rnd_seed)
             self.global_model = create_hetero_model(
@@ -97,7 +108,7 @@ class FastSim:
             ).to(self.device))
         return self._client_models[rate]
 
-    def _local_train(self, model, idx, lr):
+    def _local_train(self, model, idx, lr, draw_n=None):
         cfg = self.cfg
         adamw = cfg.client_optimizer == "adamw"
         if adamw:
@@ -110,9 +121,14 @@ class FastSim:
         model.train()
         n = len(idx)
         for _ in range(cfg.local_epochs):
-            perm = torch.randperm(n, generator=self.train_gen, device=self.device)
-            for start in range(0, n, cfg.batch_size):
-                batch = idx[perm[start:start + cfg.batch_size]]
+            if draw_n is None:
+                order = idx[torch.randperm(n, generator=self.train_gen, device=self.device)]
+                m = n
+            else:
+                order = idx[torch.randint(0, n, (draw_n,), generator=self.train_gen, device=self.device)]
+                m = draw_n
+            for start in range(0, m, cfg.batch_size):
+                batch = order[start:start + cfg.batch_size]
                 x = self.data.train_x[batch]
                 x = augment(x, self.train_gen, hflip=self.cfg.hflip)
                 x = self.data.normalize(x)
@@ -144,7 +160,7 @@ class FastSim:
                 if cfg.algorithm == "fjord":
                     self._train_fjord_client(model, pid, server_round, lr)
                 else:
-                    self._local_train(model, self.client_train[pid], lr)
+                    self._local_train(model, self.client_train[pid], lr, self.draw_n[pid])
                 states.append({k: v.detach().clone() for k, v in model.state_dict().items()})
                 weights.append(self.client_sizes[pid])
         new_state = aggregate_hetero(self.global_model.state_dict(), states, weights)
