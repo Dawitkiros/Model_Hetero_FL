@@ -4,7 +4,7 @@ Status: design brief accepted 2026-07-02 (from the simulation-overhead fork). Bu
 
 ## Why
 
-Measured on deepthought during the capping confirmation fleet: flwr/Ray runs `p030_s45` at ~34 s/round while the actual round compute (5 clients x 5 local epochs x ~1k samples, PreResNet18) is ~3-4 GPU-seconds on an A5000.
+Measured on a shared 6-GPU workstation during the capping confirmation fleet: flwr/Ray runs `p030_s45` at ~34 s/round while the actual round compute (5 clients x 5 local epochs x ~1k samples, PreResNet18) is ~3-4 GPU-seconds on an A5000.
 Roughly 90% of wall time is Ray actor scheduling, full-model serialization every round, per-actor dataset construction, uncapped OMP pools, and superlink chatter.
 Partial-participation FedAvg on one machine is a sequential loop per round; processes buy nothing.
 
@@ -23,7 +23,7 @@ Quality, simplicity, robustness, and scalability over development cost.
 - Deterministic seeding per (config, seed, round, client).
 - Reads the existing flore TOML configs unchanged; reuses flore model construction, sub-model slicing, and aggregation logic unchanged (one source of truth for method logic).
 - AMP on by default; CUDA graphs later if per-step kernels dominate.
-- Scheduler module respects ~/SAPEF/RESOURCES.md limits (thread caps, load checks) instead of relying on launch-time convention.
+- Scheduler module respects the host resource limits (thread caps, load checks) instead of relying on launch-time convention.
 
 ## Equivalence gate (load-bearing; nothing is trusted before this passes)
 
@@ -96,7 +96,7 @@ re-run flwr p030 n=5, confirm it converges up to fastsim (definitive causal matc
 ## Causal closure (2026-07-04): strengthener RUN - redraw is mean-neutral; offset within noise; law invariant
 
 The strengthener was run: flore random_split seeded per client, flwr p030 s42-46 retrained
-300r and probed (FLoRE-aaai-baseline/results/width_surface_p030fix). flwr-fix equals
+300r and probed (the flower stack (results/width_surface_p030fix)). flwr-fix equals
 flwr-orig at every rate (deltas -0.22..+0.06, paired per-seed mixed-sign): the per-fit
 redraw is approximately MEAN-NEUTRAL at full horizon, and the 60r single-seed direction
 probe (-1.54pp) was a short-horizon artifact. The fastsim-vs-flwr p030 offset

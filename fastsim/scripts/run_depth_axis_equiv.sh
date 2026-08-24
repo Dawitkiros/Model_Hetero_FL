@@ -2,7 +2,7 @@
 # DepthFL + FjORD fastsim equivalence runs: six seed-42 cells, 500 rounds each,
 # per-round metrics to CSV. Four per-GPU sequential chains (clean 1-per-GPU
 # timing) across GPUs 0,1,4,5 (GPUs 2,3 reserved for another user).
-source "$HOME/miniconda3/etc/profile.d/conda.sh"; conda activate sapef
+source "$HOME/miniconda3/etc/profile.d/conda.sh"; conda activate mhfl
 cd "$(dirname "$0")/.."
 export OMP_NUM_THREADS=8 MKL_NUM_THREADS=8
 CONF=${CONF:-conf/depth_axis}

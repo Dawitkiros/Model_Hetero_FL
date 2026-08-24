@@ -1,5 +1,5 @@
 #!/bin/bash
-source "$HOME/miniconda3/etc/profile.d/conda.sh"; conda activate sapef
+source "$HOME/miniconda3/etc/profile.d/conda.sh"; conda activate mhfl
 cd "$(dirname "$0")/.."
 FS="$(pwd)"
 AAAI="$(cd ../flower && pwd)"

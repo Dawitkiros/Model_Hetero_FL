@@ -1,4 +1,4 @@
-name: sapef
+name: mhfl
 channels:
   - pytorch
   - nvidia

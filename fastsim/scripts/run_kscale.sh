@@ -2,7 +2,7 @@
 # K-scaling fleet: does the sparse-regime law depend on the full-client FRACTION or COUNT?
 # 18 runs: K in {100,200} x {fixed-fraction p010/p040, fixed-count N=5} x seeds 42-44,
 # compared against the existing K=50 surface5 rows. Train, probe, aggregate.
-source "$HOME/miniconda3/etc/profile.d/conda.sh"; conda activate sapef
+source "$HOME/miniconda3/etc/profile.d/conda.sh"; conda activate mhfl
 cd "$(dirname "$0")/.."
 CONF=${CONF:-conf/kscale}; OUT=${OUT:-results/kscale}; LOG=${LOG:-logs/kscale}
 FS="$(pwd)"

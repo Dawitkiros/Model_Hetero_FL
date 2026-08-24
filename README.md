@@ -1,6 +1,6 @@
-# More Capacity Can Hurt: Coverage-Starved Parameters in Capacity-Heterogeneous Federated Learning
+# When More Capacity Hurts: Unequal Parameter Exposure in Model-Heterogeneous Federated Learning
 
-Code to reproduce the results of the paper *More Capacity Can Hurt: Coverage-Starved Parameters in Capacity-Heterogeneous Federated Learning* (under review).
+Code to reproduce the results of the paper *When More Capacity Hurts: Unequal Parameter Exposure in Model-Heterogeneous Federated Learning* (under review).
 
 In capacity-heterogeneous federated learning with nested sub-models, parameters outside the shared core are trained only by the capable clients.
 When capable participation is sparse, these coverage-starved parameters make the deployed full model worse than its own extracted core.
@@ -22,7 +22,7 @@ The `fastsim` stack passed model-state and evaluation equivalence gates against 
 
 ```bash
 mamba env create -f environment.yml    # or: conda env create -f environment.yml
-conda activate sapef
+conda activate mhfl
 ```
 
 CIFAR-10 and CIFAR-100 are downloaded through `torchvision` into `flower/data/` and `fastsim/data/` on first use.

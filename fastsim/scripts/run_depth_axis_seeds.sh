@@ -6,7 +6,7 @@ set -uo pipefail
 cd "$(dirname "$0")/.."
 source "$HOME/miniconda3/etc/profile.d/conda.sh"
 set +u
-conda activate sapef
+conda activate mhfl
 set -u
 export OMP_NUM_THREADS=8
 
