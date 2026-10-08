@@ -1,0 +1,40 @@
+# Width-decoupled HeteroFL (core protection), seed 44. See decoupled_a01_p010_s42.
+num-clients = 50
+num-server-rounds = 300
+local-epochs = 5
+clients-per-round = 5
+rnd-seed = 44
+
+learning-rate = 0.05
+momentum = 0.9
+weight-decay = 0.0005
+global-lr = 1.0
+
+global-model-rate = 1.0
+model-rates = "1.0,0.25"
+rate-distribution = "0.10,0.90"
+core-model-rate = 0.25
+model-split-mode = "fix"
+overlap = 0.0
+norm-type = "sbn"
+bn-recalibrate-eval = true
+core-force-scaler-eval = true
+enable-shell-repair = false
+core-protect = 1
+
+wandb-enabled = false
+save-path = "results/stage2_diag/decoupled_a01_p010_s44.csv"
+
+[algorithm]
+name = "heterofl"
+
+[dataset]
+name = "cifar100"
+partitioning = "dirichlet"
+alpha = 0.1
+batch-size = 32
+seed = 44
+
+[model]
+name = "HeteroPreResNet18"
+num-classes = 100

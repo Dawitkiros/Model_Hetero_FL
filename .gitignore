@@ -9,3 +9,5 @@ figs/
 *.log
 *.csv
 .venv/
+flower/data
+fastsim/data

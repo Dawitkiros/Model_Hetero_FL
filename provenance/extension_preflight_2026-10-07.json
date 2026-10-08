@@ -1,0 +1,1408 @@
+{
+  "fullpaper_expmatch_grid": {
+    "count": 20,
+    "changed_keys": {
+      "save-path": 20,
+      "shell-draw-frac": 20,
+      "shell-unique-frac": 15
+    },
+    "details": [
+      {
+        "config": "fpg_c100_p010_u025_f050_s42.toml",
+        "reference": "conf/expmatch/fsem_c100_p010_uf100_s42.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/expmatch/fsem_c100_p010_uf100_s42.csv",
+            "new": "results/fullpaper_expmatch_grid/fpg_c100_p010_u025_f050_s42.csv"
+          },
+          "shell-draw-frac": {
+            "old": 1.000001,
+            "new": 0.5
+          },
+          "shell-unique-frac": {
+            "old": "ABSENT",
+            "new": 0.25
+          }
+        }
+      },
+      {
+        "config": "fpg_c100_p010_u025_f050_s43.toml",
+        "reference": "conf/expmatch/fsem_c100_p010_uf100_s43.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/expmatch/fsem_c100_p010_uf100_s43.csv",
+            "new": "results/fullpaper_expmatch_grid/fpg_c100_p010_u025_f050_s43.csv"
+          },
+          "shell-draw-frac": {
+            "old": 1.000001,
+            "new": 0.5
+          },
+          "shell-unique-frac": {
+            "old": "ABSENT",
+            "new": 0.25
+          }
+        }
+      },
+      {
+        "config": "fpg_c100_p010_u025_f050_s44.toml",
+        "reference": "conf/expmatch/fsem_c100_p010_uf100_s44.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/expmatch/fsem_c100_p010_uf100_s44.csv",
+            "new": "results/fullpaper_expmatch_grid/fpg_c100_p010_u025_f050_s44.csv"
+          },
+          "shell-draw-frac": {
+            "old": 1.000001,
+            "new": 0.5
+          },
+          "shell-unique-frac": {
+            "old": "ABSENT",
+            "new": 0.25
+          }
+        }
+      },
+      {
+        "config": "fpg_c100_p010_u025_f050_s45.toml",
+        "reference": "conf/expmatch/fsem_c100_p010_uf100_s45.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/expmatch/fsem_c100_p010_uf100_s45.csv",
+            "new": "results/fullpaper_expmatch_grid/fpg_c100_p010_u025_f050_s45.csv"
+          },
+          "shell-draw-frac": {
+            "old": 1.000001,
+            "new": 0.5
+          },
+          "shell-unique-frac": {
+            "old": "ABSENT",
+            "new": 0.25
+          }
+        }
+      },
+      {
+        "config": "fpg_c100_p010_u025_f050_s46.toml",
+        "reference": "conf/expmatch/fsem_c100_p010_uf100_s46.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/expmatch/fsem_c100_p010_uf100_s46.csv",
+            "new": "results/fullpaper_expmatch_grid/fpg_c100_p010_u025_f050_s46.csv"
+          },
+          "shell-draw-frac": {
+            "old": 1.000001,
+            "new": 0.5
+          },
+          "shell-unique-frac": {
+            "old": "ABSENT",
+            "new": 0.25
+          }
+        }
+      },
+      {
+        "config": "fpg_c100_p010_u050_f025_s42.toml",
+        "reference": "conf/expmatch/fsem_c100_p010_uf100_s42.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/expmatch/fsem_c100_p010_uf100_s42.csv",
+            "new": "results/fullpaper_expmatch_grid/fpg_c100_p010_u050_f025_s42.csv"
+          },
+          "shell-draw-frac": {
+            "old": 1.000001,
+            "new": 0.25
+          },
+          "shell-unique-frac": {
+            "old": "ABSENT",
+            "new": 0.5
+          }
+        }
+      },
+      {
+        "config": "fpg_c100_p010_u050_f025_s43.toml",
+        "reference": "conf/expmatch/fsem_c100_p010_uf100_s43.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/expmatch/fsem_c100_p010_uf100_s43.csv",
+            "new": "results/fullpaper_expmatch_grid/fpg_c100_p010_u050_f025_s43.csv"
+          },
+          "shell-draw-frac": {
+            "old": 1.000001,
+            "new": 0.25
+          },
+          "shell-unique-frac": {
+            "old": "ABSENT",
+            "new": 0.5
+          }
+        }
+      },
+      {
+        "config": "fpg_c100_p010_u050_f025_s44.toml",
+        "reference": "conf/expmatch/fsem_c100_p010_uf100_s44.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/expmatch/fsem_c100_p010_uf100_s44.csv",
+            "new": "results/fullpaper_expmatch_grid/fpg_c100_p010_u050_f025_s44.csv"
+          },
+          "shell-draw-frac": {
+            "old": 1.000001,
+            "new": 0.25
+          },
+          "shell-unique-frac": {
+            "old": "ABSENT",
+            "new": 0.5
+          }
+        }
+      },
+      {
+        "config": "fpg_c100_p010_u050_f025_s45.toml",
+        "reference": "conf/expmatch/fsem_c100_p010_uf100_s45.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/expmatch/fsem_c100_p010_uf100_s45.csv",
+            "new": "results/fullpaper_expmatch_grid/fpg_c100_p010_u050_f025_s45.csv"
+          },
+          "shell-draw-frac": {
+            "old": 1.000001,
+            "new": 0.25
+          },
+          "shell-unique-frac": {
+            "old": "ABSENT",
+            "new": 0.5
+          }
+        }
+      },
+      {
+        "config": "fpg_c100_p010_u050_f025_s46.toml",
+        "reference": "conf/expmatch/fsem_c100_p010_uf100_s46.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/expmatch/fsem_c100_p010_uf100_s46.csv",
+            "new": "results/fullpaper_expmatch_grid/fpg_c100_p010_u050_f025_s46.csv"
+          },
+          "shell-draw-frac": {
+            "old": 1.000001,
+            "new": 0.25
+          },
+          "shell-unique-frac": {
+            "old": "ABSENT",
+            "new": 0.5
+          }
+        }
+      },
+      {
+        "config": "fpg_c100_p010_u050_f050_s42.toml",
+        "reference": "conf/expmatch/fsem_c100_p010_uf100_s42.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/expmatch/fsem_c100_p010_uf100_s42.csv",
+            "new": "results/fullpaper_expmatch_grid/fpg_c100_p010_u050_f050_s42.csv"
+          },
+          "shell-draw-frac": {
+            "old": 1.000001,
+            "new": 0.5
+          },
+          "shell-unique-frac": {
+            "old": "ABSENT",
+            "new": 0.5
+          }
+        }
+      },
+      {
+        "config": "fpg_c100_p010_u050_f050_s43.toml",
+        "reference": "conf/expmatch/fsem_c100_p010_uf100_s43.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/expmatch/fsem_c100_p010_uf100_s43.csv",
+            "new": "results/fullpaper_expmatch_grid/fpg_c100_p010_u050_f050_s43.csv"
+          },
+          "shell-draw-frac": {
+            "old": 1.000001,
+            "new": 0.5
+          },
+          "shell-unique-frac": {
+            "old": "ABSENT",
+            "new": 0.5
+          }
+        }
+      },
+      {
+        "config": "fpg_c100_p010_u050_f050_s44.toml",
+        "reference": "conf/expmatch/fsem_c100_p010_uf100_s44.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/expmatch/fsem_c100_p010_uf100_s44.csv",
+            "new": "results/fullpaper_expmatch_grid/fpg_c100_p010_u050_f050_s44.csv"
+          },
+          "shell-draw-frac": {
+            "old": 1.000001,
+            "new": 0.5
+          },
+          "shell-unique-frac": {
+            "old": "ABSENT",
+            "new": 0.5
+          }
+        }
+      },
+      {
+        "config": "fpg_c100_p010_u050_f050_s45.toml",
+        "reference": "conf/expmatch/fsem_c100_p010_uf100_s45.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/expmatch/fsem_c100_p010_uf100_s45.csv",
+            "new": "results/fullpaper_expmatch_grid/fpg_c100_p010_u050_f050_s45.csv"
+          },
+          "shell-draw-frac": {
+            "old": 1.000001,
+            "new": 0.5
+          },
+          "shell-unique-frac": {
+            "old": "ABSENT",
+            "new": 0.5
+          }
+        }
+      },
+      {
+        "config": "fpg_c100_p010_u050_f050_s46.toml",
+        "reference": "conf/expmatch/fsem_c100_p010_uf100_s46.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/expmatch/fsem_c100_p010_uf100_s46.csv",
+            "new": "results/fullpaper_expmatch_grid/fpg_c100_p010_u050_f050_s46.csv"
+          },
+          "shell-draw-frac": {
+            "old": 1.000001,
+            "new": 0.5
+          },
+          "shell-unique-frac": {
+            "old": "ABSENT",
+            "new": 0.5
+          }
+        }
+      },
+      {
+        "config": "fpg_c100_p010_u100_f050_s42.toml",
+        "reference": "conf/expmatch/fsem_c100_p010_uf100_s42.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/expmatch/fsem_c100_p010_uf100_s42.csv",
+            "new": "results/fullpaper_expmatch_grid/fpg_c100_p010_u100_f050_s42.csv"
+          },
+          "shell-draw-frac": {
+            "old": 1.000001,
+            "new": 0.5
+          }
+        }
+      },
+      {
+        "config": "fpg_c100_p010_u100_f050_s43.toml",
+        "reference": "conf/expmatch/fsem_c100_p010_uf100_s43.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/expmatch/fsem_c100_p010_uf100_s43.csv",
+            "new": "results/fullpaper_expmatch_grid/fpg_c100_p010_u100_f050_s43.csv"
+          },
+          "shell-draw-frac": {
+            "old": 1.000001,
+            "new": 0.5
+          }
+        }
+      },
+      {
+        "config": "fpg_c100_p010_u100_f050_s44.toml",
+        "reference": "conf/expmatch/fsem_c100_p010_uf100_s44.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/expmatch/fsem_c100_p010_uf100_s44.csv",
+            "new": "results/fullpaper_expmatch_grid/fpg_c100_p010_u100_f050_s44.csv"
+          },
+          "shell-draw-frac": {
+            "old": 1.000001,
+            "new": 0.5
+          }
+        }
+      },
+      {
+        "config": "fpg_c100_p010_u100_f050_s45.toml",
+        "reference": "conf/expmatch/fsem_c100_p010_uf100_s45.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/expmatch/fsem_c100_p010_uf100_s45.csv",
+            "new": "results/fullpaper_expmatch_grid/fpg_c100_p010_u100_f050_s45.csv"
+          },
+          "shell-draw-frac": {
+            "old": 1.000001,
+            "new": 0.5
+          }
+        }
+      },
+      {
+        "config": "fpg_c100_p010_u100_f050_s46.toml",
+        "reference": "conf/expmatch/fsem_c100_p010_uf100_s46.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/expmatch/fsem_c100_p010_uf100_s46.csv",
+            "new": "results/fullpaper_expmatch_grid/fpg_c100_p010_u100_f050_s46.csv"
+          },
+          "shell-draw-frac": {
+            "old": 1.000001,
+            "new": 0.5
+          }
+        }
+      }
+    ]
+  },
+  "fullpaper_capacity_grid": {
+    "count": 50,
+    "changed_keys": {
+      "save-path": 50,
+      "model-rates": 50
+    },
+    "details": [
+      {
+        "config": "fpcap_c100_core025_cap050_p010_s42.toml",
+        "reference": "conf/surface5/fs5_c100_p010_s42.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p010_s42.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap050_p010_s42.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.5,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap050_p010_s43.toml",
+        "reference": "conf/surface5/fs5_c100_p010_s43.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p010_s43.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap050_p010_s43.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.5,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap050_p010_s44.toml",
+        "reference": "conf/surface5/fs5_c100_p010_s44.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p010_s44.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap050_p010_s44.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.5,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap050_p010_s45.toml",
+        "reference": "conf/surface5/fs5_c100_p010_s45.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p010_s45.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap050_p010_s45.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.5,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap050_p010_s46.toml",
+        "reference": "conf/surface5/fs5_c100_p010_s46.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p010_s46.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap050_p010_s46.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.5,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap050_p020_s42.toml",
+        "reference": "conf/surface5/fs5_c100_p020_s42.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p020_s42.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap050_p020_s42.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.5,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap050_p020_s43.toml",
+        "reference": "conf/surface5/fs5_c100_p020_s43.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p020_s43.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap050_p020_s43.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.5,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap050_p020_s44.toml",
+        "reference": "conf/surface5/fs5_c100_p020_s44.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p020_s44.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap050_p020_s44.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.5,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap050_p020_s45.toml",
+        "reference": "conf/surface5/fs5_c100_p020_s45.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p020_s45.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap050_p020_s45.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.5,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap050_p020_s46.toml",
+        "reference": "conf/surface5/fs5_c100_p020_s46.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p020_s46.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap050_p020_s46.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.5,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap050_p030_s42.toml",
+        "reference": "conf/surface5/fs5_c100_p030_s42.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p030_s42.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap050_p030_s42.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.5,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap050_p030_s43.toml",
+        "reference": "conf/surface5/fs5_c100_p030_s43.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p030_s43.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap050_p030_s43.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.5,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap050_p030_s44.toml",
+        "reference": "conf/surface5/fs5_c100_p030_s44.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p030_s44.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap050_p030_s44.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.5,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap050_p030_s45.toml",
+        "reference": "conf/surface5/fs5_c100_p030_s45.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p030_s45.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap050_p030_s45.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.5,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap050_p030_s46.toml",
+        "reference": "conf/surface5/fs5_c100_p030_s46.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p030_s46.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap050_p030_s46.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.5,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap050_p040_s42.toml",
+        "reference": "conf/surface5/fs5_c100_p040_s42.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p040_s42.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap050_p040_s42.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.5,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap050_p040_s43.toml",
+        "reference": "conf/surface5/fs5_c100_p040_s43.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p040_s43.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap050_p040_s43.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.5,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap050_p040_s44.toml",
+        "reference": "conf/surface5/fs5_c100_p040_s44.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p040_s44.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap050_p040_s44.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.5,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap050_p040_s45.toml",
+        "reference": "conf/surface5/fs5_c100_p040_s45.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p040_s45.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap050_p040_s45.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.5,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap050_p040_s46.toml",
+        "reference": "conf/surface5/fs5_c100_p040_s46.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p040_s46.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap050_p040_s46.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.5,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap050_p060_s42.toml",
+        "reference": "conf/surface5/fs5_c100_p060_s42.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p060_s42.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap050_p060_s42.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.5,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap050_p060_s43.toml",
+        "reference": "conf/surface5/fs5_c100_p060_s43.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p060_s43.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap050_p060_s43.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.5,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap050_p060_s44.toml",
+        "reference": "conf/surface5/fs5_c100_p060_s44.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p060_s44.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap050_p060_s44.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.5,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap050_p060_s45.toml",
+        "reference": "conf/surface5/fs5_c100_p060_s45.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p060_s45.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap050_p060_s45.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.5,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap050_p060_s46.toml",
+        "reference": "conf/surface5/fs5_c100_p060_s46.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p060_s46.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap050_p060_s46.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.5,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap075_p010_s42.toml",
+        "reference": "conf/surface5/fs5_c100_p010_s42.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p010_s42.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap075_p010_s42.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.75,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap075_p010_s43.toml",
+        "reference": "conf/surface5/fs5_c100_p010_s43.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p010_s43.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap075_p010_s43.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.75,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap075_p010_s44.toml",
+        "reference": "conf/surface5/fs5_c100_p010_s44.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p010_s44.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap075_p010_s44.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.75,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap075_p010_s45.toml",
+        "reference": "conf/surface5/fs5_c100_p010_s45.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p010_s45.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap075_p010_s45.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.75,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap075_p010_s46.toml",
+        "reference": "conf/surface5/fs5_c100_p010_s46.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p010_s46.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap075_p010_s46.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.75,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap075_p020_s42.toml",
+        "reference": "conf/surface5/fs5_c100_p020_s42.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p020_s42.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap075_p020_s42.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.75,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap075_p020_s43.toml",
+        "reference": "conf/surface5/fs5_c100_p020_s43.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p020_s43.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap075_p020_s43.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.75,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap075_p020_s44.toml",
+        "reference": "conf/surface5/fs5_c100_p020_s44.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p020_s44.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap075_p020_s44.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.75,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap075_p020_s45.toml",
+        "reference": "conf/surface5/fs5_c100_p020_s45.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p020_s45.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap075_p020_s45.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.75,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap075_p020_s46.toml",
+        "reference": "conf/surface5/fs5_c100_p020_s46.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p020_s46.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap075_p020_s46.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.75,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap075_p030_s42.toml",
+        "reference": "conf/surface5/fs5_c100_p030_s42.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p030_s42.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap075_p030_s42.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.75,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap075_p030_s43.toml",
+        "reference": "conf/surface5/fs5_c100_p030_s43.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p030_s43.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap075_p030_s43.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.75,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap075_p030_s44.toml",
+        "reference": "conf/surface5/fs5_c100_p030_s44.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p030_s44.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap075_p030_s44.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.75,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap075_p030_s45.toml",
+        "reference": "conf/surface5/fs5_c100_p030_s45.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p030_s45.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap075_p030_s45.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.75,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap075_p030_s46.toml",
+        "reference": "conf/surface5/fs5_c100_p030_s46.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p030_s46.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap075_p030_s46.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.75,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap075_p040_s42.toml",
+        "reference": "conf/surface5/fs5_c100_p040_s42.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p040_s42.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap075_p040_s42.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.75,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap075_p040_s43.toml",
+        "reference": "conf/surface5/fs5_c100_p040_s43.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p040_s43.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap075_p040_s43.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.75,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap075_p040_s44.toml",
+        "reference": "conf/surface5/fs5_c100_p040_s44.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p040_s44.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap075_p040_s44.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.75,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap075_p040_s45.toml",
+        "reference": "conf/surface5/fs5_c100_p040_s45.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p040_s45.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap075_p040_s45.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.75,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap075_p040_s46.toml",
+        "reference": "conf/surface5/fs5_c100_p040_s46.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p040_s46.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap075_p040_s46.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.75,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap075_p060_s42.toml",
+        "reference": "conf/surface5/fs5_c100_p060_s42.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p060_s42.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap075_p060_s42.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.75,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap075_p060_s43.toml",
+        "reference": "conf/surface5/fs5_c100_p060_s43.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p060_s43.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap075_p060_s43.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.75,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap075_p060_s44.toml",
+        "reference": "conf/surface5/fs5_c100_p060_s44.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p060_s44.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap075_p060_s44.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.75,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap075_p060_s45.toml",
+        "reference": "conf/surface5/fs5_c100_p060_s45.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p060_s45.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap075_p060_s45.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.75,0.25"
+          }
+        }
+      },
+      {
+        "config": "fpcap_c100_core025_cap075_p060_s46.toml",
+        "reference": "conf/surface5/fs5_c100_p060_s46.toml",
+        "changes": {
+          "save-path": {
+            "old": "results/surface5/fs5_c100_p060_s46.csv",
+            "new": "results/fullpaper_capacity_grid/fpcap_c100_core025_cap075_p060_s46.csv"
+          },
+          "model-rates": {
+            "old": "1.0,0.25",
+            "new": "0.75,0.25"
+          }
+        }
+      }
+    ]
+  },
+  "references": {
+    "expmatch": {
+      "count": 25,
+      "verified": [
+        {
+          "cell": "fsem_c100_p010_uf100_s42",
+          "path": "Model_Hetero_FL/fastsim/results/expmatch/probes/20260821_120445_ws_fsem_c100_p010_uf100_s42/summary.json",
+          "sha256": "310aa122d07f2eaf501adb5ee1258efc3521652fd8f9f1acd51e20a176887b75"
+        },
+        {
+          "cell": "fsem_c100_p010_uf100_s43",
+          "path": "Model_Hetero_FL/fastsim/results/expmatch/probes/20260821_120406_ws_fsem_c100_p010_uf100_s43/summary.json",
+          "sha256": "bc04899d0005942b609339f2673a198a5f857a956766bba7c88cecc125d53635"
+        },
+        {
+          "cell": "fsem_c100_p010_uf100_s44",
+          "path": "Model_Hetero_FL/fastsim/results/expmatch/probes/20260821_120510_ws_fsem_c100_p010_uf100_s44/summary.json",
+          "sha256": "b88dd17dfab4caf1358ffc8606ebe1bd9ff4267d33ff56db351bdc9eda7af1a4"
+        },
+        {
+          "cell": "fsem_c100_p010_uf100_s45",
+          "path": "Model_Hetero_FL/fastsim/results/expmatch/probes/20260821_120510_ws_fsem_c100_p010_uf100_s45/summary.json",
+          "sha256": "8eceb58213095b9c99639895ef217023087a521943d780b30b7b923749f3f7bb"
+        },
+        {
+          "cell": "fsem_c100_p010_uf100_s46",
+          "path": "Model_Hetero_FL/fastsim/results/expmatch/probes/20260821_120459_ws_fsem_c100_p010_uf100_s46/summary.json",
+          "sha256": "2aeb214beb2f6bd032908d35885af8e85e21342f8e685d4fd8a74c2e5fb1968f"
+        },
+        {
+          "cell": "fsem_c100_p010_u050_s42",
+          "path": "Model_Hetero_FL/fastsim/results/expmatch/probes/20260818_111650_ws_fsem_c100_p010_u050_s42/summary.json",
+          "sha256": "cea068177b51572aa363920afb6c8bba5fdcb9d92e7d760b798f0690b404ee12"
+        },
+        {
+          "cell": "fsem_c100_p010_u050_s43",
+          "path": "Model_Hetero_FL/fastsim/results/expmatch/probes/20260818_111652_ws_fsem_c100_p010_u050_s43/summary.json",
+          "sha256": "60975afa072cd1921b7d24149d24d33c818498ae760807508449d74c3c024a41"
+        },
+        {
+          "cell": "fsem_c100_p010_u050_s44",
+          "path": "Model_Hetero_FL/fastsim/results/expmatch/probes/20260818_111628_ws_fsem_c100_p010_u050_s44/summary.json",
+          "sha256": "23c92c3fe4dc8323910a12954c8958e9eff03db461d6be66a94ec6b7cbef90aa"
+        },
+        {
+          "cell": "fsem_c100_p010_u050_s45",
+          "path": "Model_Hetero_FL/fastsim/results/expmatch/probes/20260821_115508_ws_fsem_c100_p010_u050_s45/summary.json",
+          "sha256": "037d7a2db16fb2235ffd1598102ae681e1c98b540ebe5b906d69cc3a163728f9"
+        },
+        {
+          "cell": "fsem_c100_p010_u050_s46",
+          "path": "Model_Hetero_FL/fastsim/results/expmatch/probes/20260821_115532_ws_fsem_c100_p010_u050_s46/summary.json",
+          "sha256": "b081c60b6fd040368ac0a52e3adf165eab7b6fad52406bf608abed9b3ba2720d"
+        },
+        {
+          "cell": "fsem_c100_p010_u025_s42",
+          "path": "Model_Hetero_FL/fastsim/results/expmatch/probes/20260818_111639_ws_fsem_c100_p010_u025_s42/summary.json",
+          "sha256": "649daec4832a5e7314585cf4f717aef0916047a7d44787a4cdeabff43d45bb69"
+        },
+        {
+          "cell": "fsem_c100_p010_u025_s43",
+          "path": "Model_Hetero_FL/fastsim/results/expmatch/probes/20260818_111625_ws_fsem_c100_p010_u025_s43/summary.json",
+          "sha256": "9565a0eb1e2d588d0fd7ec1f9fc0a5e1192da77474d9cca1fdd70d16afd88318"
+        },
+        {
+          "cell": "fsem_c100_p010_u025_s44",
+          "path": "Model_Hetero_FL/fastsim/results/expmatch/probes/20260818_111620_ws_fsem_c100_p010_u025_s44/summary.json",
+          "sha256": "da2e7c302dd0cf84cdbdcfc9ff4eb1775afd64fe95c2a86d5d46c11421fe6f1e"
+        },
+        {
+          "cell": "fsem_c100_p010_u025_s45",
+          "path": "Model_Hetero_FL/fastsim/results/expmatch/probes/20260821_115524_ws_fsem_c100_p010_u025_s45/summary.json",
+          "sha256": "7b4762a5dc96e07c26c6423d4d752da070d1ef6c1eccd4b6ca6b0cce408380a9"
+        },
+        {
+          "cell": "fsem_c100_p010_u025_s46",
+          "path": "Model_Hetero_FL/fastsim/results/expmatch/probes/20260821_115537_ws_fsem_c100_p010_u025_s46/summary.json",
+          "sha256": "a1a8cbc007f31a1f62515ef5dd2690110f945fc9add3e6c728a7e80901833fcb"
+        },
+        {
+          "cell": "fsem_c100_p010_f025_s42",
+          "path": "Model_Hetero_FL/fastsim/results/expmatch/probes/20260818_115450_ws_fsem_c100_p010_f025_s42/summary.json",
+          "sha256": "618a9bde883033bf21d873c621df636faa4037bdc46f3f51311fc11a658c24ee"
+        },
+        {
+          "cell": "fsem_c100_p010_f025_s43",
+          "path": "Model_Hetero_FL/fastsim/results/expmatch/probes/20260818_115526_ws_fsem_c100_p010_f025_s43/summary.json",
+          "sha256": "68d619f116d8df331a52d75282da13d09b928072bec75c97cf24b65bdb7d3887"
+        },
+        {
+          "cell": "fsem_c100_p010_f025_s44",
+          "path": "Model_Hetero_FL/fastsim/results/expmatch/probes/20260818_115423_ws_fsem_c100_p010_f025_s44/summary.json",
+          "sha256": "9bf950f2869872d0411027e48e22dbf66a413f1a0a74b21e25b49abacbd8378e"
+        },
+        {
+          "cell": "fsem_c100_p010_f025_s45",
+          "path": "Model_Hetero_FL/fastsim/results/expmatch/probes/20260821_114529_ws_fsem_c100_p010_f025_s45/summary.json",
+          "sha256": "94a2e7f911b16dc8f31014fd6768c428db83f79195e37c81f0e2a9d671d3403d"
+        },
+        {
+          "cell": "fsem_c100_p010_f025_s46",
+          "path": "Model_Hetero_FL/fastsim/results/expmatch/probes/20260821_114533_ws_fsem_c100_p010_f025_s46/summary.json",
+          "sha256": "c9da4c0a79a84559058eef557de6ce3a9a85400e22a5dd5daa6c9a7652128b99"
+        },
+        {
+          "cell": "fsem_c100_p010_uf025_s42",
+          "path": "Model_Hetero_FL/fastsim/results/expmatch/probes/20260818_124528_ws_fsem_c100_p010_uf025_s42/summary.json",
+          "sha256": "9f23768aab058f75730cfa8744eae2c5b47ab87f69cabbd7f3281264f9452c9c"
+        },
+        {
+          "cell": "fsem_c100_p010_uf025_s43",
+          "path": "Model_Hetero_FL/fastsim/results/expmatch/probes/20260818_124618_ws_fsem_c100_p010_uf025_s43/summary.json",
+          "sha256": "0d97af80c38fd37c6826385afc2dd3489d3d6515809141bbec38af04d38dc1cf"
+        },
+        {
+          "cell": "fsem_c100_p010_uf025_s44",
+          "path": "Model_Hetero_FL/fastsim/results/expmatch/probes/20260818_124611_ws_fsem_c100_p010_uf025_s44/summary.json",
+          "sha256": "faac349b2ba0d99b54f8578501ad0927f235c99f1bfc47acdfd8af77e6d1f02a"
+        },
+        {
+          "cell": "fsem_c100_p010_uf025_s45",
+          "path": "Model_Hetero_FL/fastsim/results/expmatch/probes/20260821_115538_ws_fsem_c100_p010_uf025_s45/summary.json",
+          "sha256": "c0f7041b127415d2ace2784549c9cd772d95069754b0a9c73a45fc11e72a0808"
+        },
+        {
+          "cell": "fsem_c100_p010_uf025_s46",
+          "path": "Model_Hetero_FL/fastsim/results/expmatch/probes/20260821_115548_ws_fsem_c100_p010_uf025_s46/summary.json",
+          "sha256": "6de689346357de4da0c8df28d00f40e7d686b2d10bc90653da836ab28df4c8af"
+        }
+      ],
+      "probe_settings": {
+        "ccvr_epochs": 60,
+        "ccvr_lr": 0.05,
+        "ccvr_samples_per_class": 450,
+        "bn_batches": 20,
+        "batch_size": 256,
+        "workers": 2
+      },
+      "head_seeds": [
+        42,
+        43,
+        44
+      ]
+    },
+    "surface5": {
+      "count": 25,
+      "verified": [
+        {
+          "cell": "fs5_c100_p010_s42",
+          "path": "Model_Hetero_FL/fastsim/results/surface5/probes/20260703_210904_ws_fs5_c100_p010_s42/summary.json",
+          "sha256": "e0df5817c8fa187546d482e0d76b13c1f466f4c223e913eadd36f7b6fcd13d91"
+        },
+        {
+          "cell": "fs5_c100_p010_s43",
+          "path": "Model_Hetero_FL/fastsim/results/surface5/probes/20260703_210846_ws_fs5_c100_p010_s43/summary.json",
+          "sha256": "ad2be1cf365da35dcccf31ffa8fd86c3a9baa8eec102ebb36a6cbe65a263d897"
+        },
+        {
+          "cell": "fs5_c100_p010_s44",
+          "path": "Model_Hetero_FL/fastsim/results/surface5/probes/20260703_210844_ws_fs5_c100_p010_s44/summary.json",
+          "sha256": "ed02dee6e1567f43e4c4bfc92c18f11ce157150471be9593c48e789715734744"
+        },
+        {
+          "cell": "fs5_c100_p010_s45",
+          "path": "Model_Hetero_FL/fastsim/results/surface5/probes/20260703_210852_ws_fs5_c100_p010_s45/summary.json",
+          "sha256": "bd5617c6d28b825f88c992d05bc4cb977130802cc441feeea0aa3c919dbbe079"
+        },
+        {
+          "cell": "fs5_c100_p010_s46",
+          "path": "Model_Hetero_FL/fastsim/results/surface5/probes/20260703_210845_ws_fs5_c100_p010_s46/summary.json",
+          "sha256": "122b62b06c0b392479532cff52fe852abf4d83cf7de65676a828d4cb283f6182"
+        },
+        {
+          "cell": "fs5_c100_p020_s42",
+          "path": "Model_Hetero_FL/fastsim/results/surface5/probes/20260703_210843_ws_fs5_c100_p020_s42/summary.json",
+          "sha256": "2ccc4a7e91a96a30e9a3305fb5299a6a64b03ebd865527f1d33f1ea93b82208d"
+        },
+        {
+          "cell": "fs5_c100_p020_s43",
+          "path": "Model_Hetero_FL/fastsim/results/surface5/probes/20260703_210846_ws_fs5_c100_p020_s43/summary.json",
+          "sha256": "2bd918cd79e3690678c6d66aabdbdb57cf607635a0a908e7272439726e6ef466"
+        },
+        {
+          "cell": "fs5_c100_p020_s44",
+          "path": "Model_Hetero_FL/fastsim/results/surface5/probes/20260703_210902_ws_fs5_c100_p020_s44/summary.json",
+          "sha256": "d90577839bc94b2d810da43a33f64aa11e7160ef062dce5c1c75fd7ef0bc7c51"
+        },
+        {
+          "cell": "fs5_c100_p020_s45",
+          "path": "Model_Hetero_FL/fastsim/results/surface5/probes/20260703_210840_ws_fs5_c100_p020_s45/summary.json",
+          "sha256": "5b5940022a60d066bc13f1ff0d96c0c9624181c36c7a5934cfa7d68e1a9f5244"
+        },
+        {
+          "cell": "fs5_c100_p020_s46",
+          "path": "Model_Hetero_FL/fastsim/results/surface5/probes/20260703_210836_ws_fs5_c100_p020_s46/summary.json",
+          "sha256": "9872e62b38d3878eea1f7a6c33804cb7fe558b1f0d86d364f4202724ffe92767"
+        },
+        {
+          "cell": "fs5_c100_p030_s42",
+          "path": "Model_Hetero_FL/fastsim/results/surface5/probes/20260703_210830_ws_fs5_c100_p030_s42/summary.json",
+          "sha256": "3c3a7d8bf92074999df039a8131009e4ea0356251370c8e479dac8fb1229e471"
+        },
+        {
+          "cell": "fs5_c100_p030_s43",
+          "path": "Model_Hetero_FL/fastsim/results/surface5/probes/20260703_210837_ws_fs5_c100_p030_s43/summary.json",
+          "sha256": "3bb50eb14513e85bc12763f462c90b4ac02144a5c99d7753334ae57bc56882c3"
+        },
+        {
+          "cell": "fs5_c100_p030_s44",
+          "path": "Model_Hetero_FL/fastsim/results/surface5/probes/20260703_210841_ws_fs5_c100_p030_s44/summary.json",
+          "sha256": "84d11627c2dff06d3504c45df7db253c31c9a877b8d0f2dc9da207500487b940"
+        },
+        {
+          "cell": "fs5_c100_p030_s45",
+          "path": "Model_Hetero_FL/fastsim/results/surface5/probes/20260703_210856_ws_fs5_c100_p030_s45/summary.json",
+          "sha256": "14c999554967c816ace0277b4c4851f6f6d77cf498a74fa328f7b30be480b202"
+        },
+        {
+          "cell": "fs5_c100_p030_s46",
+          "path": "Model_Hetero_FL/fastsim/results/surface5/probes/20260703_210843_ws_fs5_c100_p030_s46/summary.json",
+          "sha256": "6994dc0cf4a999a2b428a637a3c2b39280acbbb0d3e2c616d8ab7710bdcc7bf9"
+        },
+        {
+          "cell": "fs5_c100_p040_s42",
+          "path": "Model_Hetero_FL/fastsim/results/surface5/probes/20260703_210827_ws_fs5_c100_p040_s42/summary.json",
+          "sha256": "33493ed95fbdf3f1e0e19d281b8c19ca11ff04ec0b6fdb866ffc41288ece2f24"
+        },
+        {
+          "cell": "fs5_c100_p040_s43",
+          "path": "Model_Hetero_FL/fastsim/results/surface5/probes/20260703_210855_ws_fs5_c100_p040_s43/summary.json",
+          "sha256": "06093d28dc3a2440495e62d825351bac686e194f67a340386c87d1b3de4b0816"
+        },
+        {
+          "cell": "fs5_c100_p040_s44",
+          "path": "Model_Hetero_FL/fastsim/results/surface5/probes/20260703_210902_ws_fs5_c100_p040_s44/summary.json",
+          "sha256": "c4528835ecd85fcfd564e6c0e31e817b47a9cf21b3b0fcd264160a38f1cba94d"
+        },
+        {
+          "cell": "fs5_c100_p040_s45",
+          "path": "Model_Hetero_FL/fastsim/results/surface5/probes/20260703_211839_ws_fs5_c100_p040_s45/summary.json",
+          "sha256": "0d82c3541384f4f802511aeb499e56d6c5be2de7b6bf2ec287da4bcba59a7db9"
+        },
+        {
+          "cell": "fs5_c100_p040_s46",
+          "path": "Model_Hetero_FL/fastsim/results/surface5/probes/20260703_211837_ws_fs5_c100_p040_s46/summary.json",
+          "sha256": "47cb410e5e41bb4dd0c6bb50f45dd34d7e12add0166e32e34e5535b8ef23fedf"
+        },
+        {
+          "cell": "fs5_c100_p060_s42",
+          "path": "Model_Hetero_FL/fastsim/results/surface5/probes/20260703_211859_ws_fs5_c100_p060_s42/summary.json",
+          "sha256": "9e4859b159437942bb1e3e6b69d47b14e74168522db8c64d0e46914b86de7ac9"
+        },
+        {
+          "cell": "fs5_c100_p060_s43",
+          "path": "Model_Hetero_FL/fastsim/results/surface5/probes/20260703_211851_ws_fs5_c100_p060_s43/summary.json",
+          "sha256": "e7cc4837c676ad6e3c32f1db641e2016036b6bbc07d223ac8ce612da4f897fa9"
+        },
+        {
+          "cell": "fs5_c100_p060_s44",
+          "path": "Model_Hetero_FL/fastsim/results/surface5/probes/20260703_211850_ws_fs5_c100_p060_s44/summary.json",
+          "sha256": "ec9015a15cfcde31059f399e2ac9277b415fba5fe7be36226c296aa6351adc20"
+        },
+        {
+          "cell": "fs5_c100_p060_s45",
+          "path": "Model_Hetero_FL/fastsim/results/surface5/probes/20260703_211904_ws_fs5_c100_p060_s45/summary.json",
+          "sha256": "976c8019e73fad39b4d9133eee3dfc39aad80be63a28ff63a9aca9fd9223820b"
+        },
+        {
+          "cell": "fs5_c100_p060_s46",
+          "path": "Model_Hetero_FL/fastsim/results/surface5/probes/20260703_211909_ws_fs5_c100_p060_s46/summary.json",
+          "sha256": "569fafdcd847a39318be59523b76958605b72db6a76664586fa05007704f3913"
+        }
+      ],
+      "probe_settings": {
+        "ccvr_epochs": 60,
+        "ccvr_lr": 0.05,
+        "ccvr_samples_per_class": 450,
+        "bn_batches": 20,
+        "batch_size": 256,
+        "workers": 2
+      },
+      "head_seeds": [
+        42,
+        43,
+        44
+      ]
+    }
+  },
+  "links": [
+    {
+      "link": "FLoRE/CoDEC_FM/code/Model_Hetero_FL_extension/fastsim/results/expmatch",
+      "target": "Model_Hetero_FL/fastsim/results/expmatch"
+    },
+    {
+      "link": "FLoRE/CoDEC_FM/code/Model_Hetero_FL_extension/fastsim/results/surface5",
+      "target": "Model_Hetero_FL/fastsim/results/surface5"
+    },
+    {
+      "link": "FLoRE/CoDEC_FM/code/Model_Hetero_FL_extension/fastsim/data",
+      "target": "Model_Hetero_FL/data"
+    },
+    {
+      "link": "FLoRE/CoDEC_FM/code/Model_Hetero_FL_extension/flower/data",
+      "target": "Model_Hetero_FL/data"
+    }
+  ],
+  "training_launched": false,
+  "environment": {
+    "sapef": true,
+    "mhfl": false,
+    "runner_environment": "mhfl"
+  },
+  "notes": [
+    "A1 changes unique pools and sample presentations for capable clients; this also changes their shared-core updates. Low-capacity clients remain unchanged.",
+    "A1 baseline uses shell-draw-frac=1.000001 to enable replacement sampling at the baseline draw count.",
+    "A2 retains a width-1.0 server container and probes the trained maximum width 0.5 or 0.75 against the 0.25 core.",
+    "Only A2 seeds 42,43,44 belong to the initial pilot; seeds 45,46 are deferred.",
+    "This is a static configuration and existing-output audit, not a runtime training smoke test."
+  ],
+  "implementation_parity": [
+    {
+      "stack": "fastsim",
+      "folder": "fastsim",
+      "files": 16,
+      "differences": []
+    },
+    {
+      "stack": "fastsim",
+      "folder": "flore",
+      "files": 28,
+      "differences": []
+    },
+    {
+      "stack": "flower",
+      "folder": "flore",
+      "files": 23,
+      "differences": []
+    },
+    {
+      "stack": "flower",
+      "folder": "probe",
+      "files": 14,
+      "differences": []
+    }
+  ],
+  "shell_syntax": "Both new runners pass bash -n",
+  "extension_summary_reader": "All 50 required references passed"
+}
