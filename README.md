@@ -1,136 +1,82 @@
 # When More Capacity Hurts: Unequal Parameter Exposure in Model-Heterogeneous Federated Learning
 
-Code to reproduce the results of the paper *When More Capacity Hurts: Unequal Parameter Exposure in Model-Heterogeneous Federated Learning*, 40th Conference on Neural Information Processing Systems (NeurIPS 2026). Workshop: Collaborative, Open, and DECentralized training of Foundation Models.
+Code accompanying the paper at the NeurIPS 2026 workshop **Collaborative, Open, and DECentralized training of Foundation Models**.
 
-In capacity-heterogeneous federated learning with nested sub-models, parameters outside the shared core are trained only by the capable clients.
-When capable participation is sparse, these coverage-starved parameters make the deployed full model worse than its own extracted core.
-The paper characterizes this reversal on the width and depth axes and traces it to the volume of data reaching the exclusive parameters.
+In model-heterogeneous federated learning, every client trains a shared core, while only capable clients train the additional parameters, called the shell.
+The paper asks when those additional parameters improve the model that clients deploy, and connects deployment quality to both the data reaching the shell and the optimization it receives.
+
+## Main findings
+
+`p_full` is the fraction of clients capable of training the full model; `K` is the total number of clients.
+
+- **The larger model can underperform its own core before classifier calibration.** At the sparse CIFAR-100 operating point, the full model achieves 25.1 ± 2.6% raw accuracy and its extracted core achieves 38.2 ± 1.4%, across three FL seeds.
+- **The crossover persists after CCVR.** On CIFAR-100, the calibrated core-minus-full gap is +2.69 ± 1.33 percentage points at `p_full=0.10` and -6.06 ± 1.40 at `p_full=0.60`, over five FL seeds. CIFAR-10 and a width-sliced Vision Transformer show the same reversal in ordering as eligibility increases.
+- **Data reach and optimization dose interact.** Restricting unique data alone produces comparatively small changes in the matched experiment. Jointly reducing unique data and per-epoch draws increases the gap to +6.87 ± 1.54 points. Increasing draws fourfold at `K=200`, with five eligible clients, reduces the gap from +12.54 ± 2.71 to +4.94 ± 0.60 points.
+- **Depth heterogeneity exhibits a related deployment gap.** At `p_full=0.10`, the DepthFL depth-1 exit outperforms the four-exit ensemble by 26.8 ± 1.5 points. This comparison uses the method's distinct shallow and ensemble readouts.
+- **Calibration matters for small-model comparisons.** In Table 4, the homogeneous rate-0.25 model reaches 52.58 ± 0.66% after CCVR and the HeteroFL core reaches 52.34 ± 0.92%. Their paired difference is +0.24 points, with a 95% confidence interval of [-1.02, +1.49].
+
+A positive deployment gap means **core accuracy minus full-model accuracy**, in percentage points.
+The FL seed is the replication unit: classifier repetitions are averaged within each FL seed before computing means, sample standard deviations, or paired contrasts.
 
 ## Repository layout
 
-The paper reports results from multiple implementations and identifies the stack wherever results appear; the release mirrors that structure.
-
-```
-flower/     Flower/Ray stack: flore package, flwr app config, probes, calibration comparison and alpha-sweep configs
-fastsim/    Vectorized single-process stack: fastsim package plus its pinned flore copy, surface/exposure/depth/ViT configs and runners
+```text
+flower/     Flower/Ray training, flore models, calibration probes, baseline and alpha-sweep configs
+fastsim/    Single-process simulator, its pinned flore copy, and surface/exposure/depth/ViT experiments
 ```
 
-The two `flore` copies are intentionally separate: each subtree ships exactly the code state that produced its results.
-The `fastsim` stack passed model-state and evaluation equivalence gates against the Flower implementation (paper, Appendix B).
+See Appendices E, F, and G of the paper for implementation details and experimental protocols.
 
-## Installation
+## Installation and reproduction
+
+Run commands from the repository root unless a different directory is shown.
 
 ```bash
-mamba env create -f environment.yml    # or: conda env create -f environment.yml
+mamba env create -f environment.yml
 conda activate mhfl
 ```
 
-CIFAR-10 and CIFAR-100 are downloaded through `torchvision` into `flower/data/` and `fastsim/data/` on first use.
+Download CIFAR-10 and CIFAR-100 with `torchvision` into `flower/data/` and `fastsim/data/` before running experiments.
 
-## Reproducing the paper
+### Figures 1 and 2, Table 1, and matched optimization
 
-All fleet scripts accept `GPUS` as a comma-separated device list (default `0`) and skip already-completed cells, so they can be re-run to resume.
-
-### Figure 1 and the deployment surface (crossover)
-
-Trains the five-seed HeteroFL surface on CIFAR-100 and CIFAR-10 across capable fractions, then probes every checkpoint at six extraction rates with sBN recalibration and CCVR calibration.
+Set `GPUS` to your available devices, such as `GPUS=0` for one GPU.
 
 ```bash
-GPUS=0,1 bash fastsim/scripts/run_surface5.sh
-python flower/scripts/plot_crossover.py --out-dir figs
+GPUS=0,1,2,3 bash fastsim/scripts/run_surface5.sh
+GPUS=0,1,2,3 bash fastsim/scripts/run_kscale.sh
+GPUS=0,1,2,3 CONF=conf/acfleet OUT=results/acfleet LOG=logs/acfleet bash fastsim/scripts/run_kscale.sh
+GPUS=0,1,2,3 bash fastsim/scripts/run_expmatch.sh
 ```
 
-### Table 2: exposure interventions
+These runners train checkpoints and execute the width/CCVR probes.
+For narrower reruns of the exposure ladder, use [run_k500_p001.sh](fastsim/scripts/run_k500_p001.sh) or [run_iid_ladder.sh](fastsim/scripts/run_iid_ladder.sh).
+Resume checks rely on existing checkpoint files or probe-directory names; verify that each expected `summary.json` is complete before aggregation.
 
-The K-scaling arm (fixed fraction, growing fleet) and the fixed-count arm (five writers, shrinking data share):
+Regenerate Figure 3 with:
 
 ```bash
-GPUS=0,1 bash fastsim/scripts/run_kscale.sh
+python fastsim/scripts/plot_matched.py fastsim/results figs/fig_matched_readable.pdf figs/matched_results
 ```
 
-The K=500 and IID arms use the same runner with a different config directory:
+### Table 2 and diagnostic controls
 
-```bash
-GPUS=0,1 CONF=conf/acfleet OUT=results/acfleet LOG=logs/acfleet bash fastsim/scripts/run_kscale.sh
-```
+Use [arm_a_skyline.py](flower/probe/arm_a_skyline.py) with an extracted core checkpoint, pool `5` or `all`, and seeds 42 through 44.
+Appendix B controls: [zeroed shell](flower/probe/control2_zeroed_shell.py) and [gradient alignment](flower/probe/grad_conflict_gate.py).
 
-The K=500 fixed-count cell (1% share) and the IID ladder cells (K=100 and K=500 at five writers) have dedicated runners:
+### Tables 3 and 5: depth and distillation
 
-```bash
-GPUS=0,1 bash fastsim/scripts/run_k500_p001.sh
-GPUS=0,1 bash fastsim/scripts/run_iid_ladder.sh
-```
+Run the [depth configs](fastsim/conf/depth_axis) with [fastsim_cell.py](fastsim/scripts/fastsim_cell.py), then summarize the CSVs using [agg_depth_axis_seeds.py](fastsim/scripts/agg_depth_axis_seeds.py).
 
-### Matched-optimization intervention
+### Table 4 and Figure 4: Flower experiments
 
-Each eligible client's unique pool is restricted (`shell-unique-frac`) and/or its per-epoch draws rescaled (`shell-draw-frac`) while SGD steps, minibatch layout, and aggregation weights stay at baseline values; the suite includes the u=f=1 with-replacement sampler control and the K=200 draws-x4 mirror:
+Run the [baseline](flower/conf/aaai_missing_baseline) and [alpha-sweep](flower/conf/alpha_sweep) configs with Flower.
+For Table 4 calibration, use [width_aware_calibration_oracle.py](flower/probe/width_aware_calibration_oracle.py) with the matching checkpoint and method-specific extractor (`static`, `fiarse`, or `fedrolex`).
 
-```bash
-GPUS=0,1 bash fastsim/scripts/run_expmatch.sh
-```
+### ViT transfer
 
-### Table 3: constrained shell-training oracle
-
-Train the frozen rate-0.25 core once, then run the oracle arms on a trained full checkpoint:
-
-```bash
-cd flower
-python probe/train_core025.py
-python probe/arm_a_skyline.py --checkpoint <heterofl_finalmodel.pt> --config <run_config.toml>
-```
-
-### Controls (Table 1 rows)
-
-```bash
-cd flower
-python probe/control2_zeroed_shell.py --checkpoint <heterofl_finalmodel.pt> --config <run_config.toml>
-python probe/grad_conflict_gate.py
-```
-
-`grad_conflict_gate.py` is the self-contained gradient-alignment simulator; it trains its own width-sliced substrate.
-
-### Figure 2: label-heterogeneity sweep (Flower/Ray)
-
-Each cell is one `flwr` simulation over a run config in `flower/conf/alpha_sweep/`.
-
-```bash
-cd flower
-script -qefc "flower-simulation --app . --run-config conf/alpha_sweep/heterofl_a30_p030.toml --num-supernodes 50 --stream" run.log
-python scripts/plot_alpha_sweep.py --out-dir figs
-```
-
-The `script -qefc` wrapper gives the simulation a pty; recent `flwr` versions silently no-op without one in non-interactive shells.
-
-### Table 4: depth axis and distillation
-
-Six DepthFL/FjORD cells per seed, 500 rounds, with per-round CSV metrics and health guards, then last-50-round aggregation:
-
-```bash
-bash fastsim/scripts/run_depth_axis_seeds.sh
-python fastsim/scripts/agg_depth_axis_seeds.py
-```
-
-`fastsim/scripts/run_depth_axis_equiv.sh` reruns the six-cell equivalence gate against the Flower originals, and `compare_depth_axis.py` prints the comparison.
-
-### Table 5: calibrated deployment comparison
-
-Train the uniform-harness baselines (HeteroFL, FedRolex, FIARSE, homogeneous small and large) from `flower/conf/aaai_missing_baseline/` with the `flower-simulation` command above, then probe each final model with:
-
-```bash
-cd flower
-python probe/width_ccvr_frontier.py --checkpoint <finalmodel.pt> --config <run_config.toml> --rates 0.25,1.0 --skip-supervised
-```
-
-### Vision Transformer transfer
-
-The width-sliced ViT fleet lives in `fastsim/conf/vitfleet/` (three seeds, rate-0.125 core):
-
-```bash
-cd fastsim
-python scripts/fastsim_cell.py --config conf/vitfleet/fsvit_p010_s42.toml --gpu 0 --csv results/vitfleet/fsvit_p010_s42.csv
-```
-
-Evaluate slicing behavior with `flower/probe/control2_vit.py`.
+Train the [ViT configs](fastsim/conf/vitfleet) with `FastSim`, save the checkpoint, and evaluate rates 0.125 and 1.0 with [width_ccvr_frontier.py](flower/probe/width_ccvr_frontier.py).
+Slicing check: [control2_vit.py](flower/probe/control2_vit.py).
 
 ## License
 

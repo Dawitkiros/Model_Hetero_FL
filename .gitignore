@@ -11,3 +11,6 @@ figs/
 .venv/
 flower/data
 fastsim/data
+fastsim/scripts/plot_matched.py
+papers/
+provenance/
